@@ -20,6 +20,7 @@ class Button():
                     cv2.FONT_HERSHEY_COMPLEX, 3, (255,255,255), 5)
         return img
 
+mybutton = Button([100,100], "Q")
 
 while True:
     success, img = cap.read()
@@ -34,7 +35,6 @@ while True:
 
         print("Index finger tip:", lmList[8])
 
-    mubutton = Button([100,100], "Q")
 
     cv2.imshow("Image", img)
     cv2.waitKey(1)
