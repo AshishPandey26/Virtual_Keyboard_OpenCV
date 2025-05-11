@@ -34,7 +34,8 @@ while True:
         bboxInfo = hand["bbox"]
 
         print("Index finger tip:", lmList[8])
-
+     
+    img= mybutton.draw(img)
 
     cv2.imshow("Image", img)
     cv2.waitKey(1)
