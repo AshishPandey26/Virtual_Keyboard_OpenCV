@@ -13,6 +13,7 @@ class Button():
         self.pos = pos
         self.size = size
         self.text = text
+        
     
     def draw(self, img):
         cv2.rectangle(img, (self.pos), self.size, (255,0,255), cv2.FILLED)
