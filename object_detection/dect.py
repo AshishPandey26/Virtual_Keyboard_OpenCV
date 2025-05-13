@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load and preprocess image
-img = cv2.imread("mixshapes.jpg")
+img = cv2.imread("shapes.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 edged = cv2.Canny(blurred, 50, 150)
