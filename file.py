@@ -49,7 +49,7 @@ def drawAll(img, buttonList):
         x, y = button.pos
         w, h = button.size
         cvzone.cornerRect(img, (x, y, w, h), 20, rt=0)
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 255),button_color, cv2.FILLED)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 255), cv2.FILLED)
         cv2.putText(img, button.text, (x + 20, y + 65),
                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
     return img
@@ -88,7 +88,7 @@ while True:
                 
                     # Draw a visual cue (green circle) to show click gesture
                     cv2.circle(img, (lmList[8][0], lmList[8][1]), 10, (0, 255, 0), cv2.FILLED)
-                    
+        
     # Display final text
     cv2.rectangle(img, (50, 350), (700, 450), (175, 0, 175), cv2.FILLED)
     cv2.putText(img, finalText, (60, 430),

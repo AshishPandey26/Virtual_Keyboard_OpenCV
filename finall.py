@@ -57,10 +57,12 @@ def drawAll(img, buttonList):
 # Main loop
 while True:
     success, img = cap.read()
+
+    img = cv2.flip(img,1)
     hands, img = detector.findHands(img)  # returns hands and image
 
     img = drawAll(img, buttonList)
-
+    
     if hands:
         hand = hands[0]
         lmList = hand["lmList"]
